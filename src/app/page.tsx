@@ -1,8 +1,6 @@
-import Image from "next/image";
+
 import Headers from "../components/Header";
 import Hero from "@/components/Hero";
-import MomsFeatures from "@/components/MomsFeature";
-import Page from "@/components/check";
 import Footer from "@/components/Footer";
 import AboutSection from "@/components/AboutSection";
 import MomsFeature from "@/components/MomsFeature";

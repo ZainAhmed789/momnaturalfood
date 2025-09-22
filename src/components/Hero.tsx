@@ -88,22 +88,7 @@ const infoVariants: Variants = {
 const Hero = () => {
   const [currentProduct, setCurrentProduct] = useState(0);
   const [direction, setDirection] = useState(0);
-  const [imagesLoaded, setImagesLoaded] = useState<Record<number, boolean>>({});
   const [isPaused, setIsPaused] = useState(false);
-
-  // Preload all images
-  useEffect(() => {
-    products.forEach((product) => {
-      const img = new window.Image();
-      img.src = product.image;
-      img.onload = () => {
-        setImagesLoaded(prev => ({
-          ...prev,
-          [product.id]: true
-        }));
-      };
-    });
-  }, []);
 
   useEffect(() => {
     if (isPaused) return;
@@ -204,7 +189,7 @@ const Hero = () => {
               {/* Product Name */}
              <h1 className="text-4xl md:text-5xl font-bold leading-tight">
   <span className="block font-volkswagen text-yellow-300 drop-shadow-lg">
-    MOM'S
+    MOM`&apos;`S
   </span>
   <span className="text-white drop-shadow-lg">{currentProductData.name}</span>
 </h1>

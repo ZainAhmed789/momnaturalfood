@@ -109,7 +109,7 @@ const AboutSection = () => {
           <div className="space-y-8 animate-fade-in-right">
             <div className="space-y-6">
               <h3 className="text-3xl font-bold text-gray-800">
-                Enriched with Nature's Best
+                Enriched with Natures Best
               </h3>
               
               <p className="text-lg text-gray-700 leading-relaxed">

@@ -25,7 +25,13 @@ function FeatureCard({ feature, className, zIndexOffset = 0, ...props }: Feature
 
   const content = (
     <>
-      <img src={imageUrl} alt="" className="absolute inset-0 h-full w-full object-cover rounded-xl" />
+   <Image 
+  src={imageUrl} 
+  alt={`${category} - ${title}`}
+  fill
+  className="object-cover rounded-xl" 
+  sizes="(max-width: 768px) 100vw, 50vw"
+/>
       <div className="z-10 flex h-full w-full flex-col gap-2 bg-gradient-to-t from-zinc-800/40 from-15% to-transparent p-3 rounded-xl">
         <small className="inline w-fit rounded-xl bg-orange-950 bg-opacity-50 px-2 py-1 text-xs font-medium leading-none text-white">
           {category}
@@ -93,7 +99,7 @@ const ProductFeature = () => {
         <FeatureCard
           feature={{
             category: "Fruits",
-            imageUrl: "./p1.jpg",
+            imageUrl: "/p1.jpg",
             title: "Granola",
           }}
           initial={{
@@ -120,7 +126,7 @@ const ProductFeature = () => {
           feature={{
             category: "Vegetables",
             title: " Bites",
-            imageUrl: "./product33.jpg",
+            imageUrl: "/product33.jpg",
           }}
           initial={{
             y: yOffset,
@@ -141,7 +147,7 @@ const ProductFeature = () => {
           feature={{
             category: "Fruits/Grains",
             title: "Cookie",
-            imageUrl: "./p4.jpg",
+            imageUrl: "/p4.jpg",
           }}
           initial={{
             x: -cardWidth,
