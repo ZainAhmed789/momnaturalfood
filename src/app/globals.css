@@ -24,3 +24,15 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+:root {
+  --font-volkswagen: "Volkswagen", sans-serif;
+}
+@font-face {
+  font-family: "Volkswagen";
+  src: url("/fonts/Volkswagen-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.font-volkswagen {
+  font-family: var(--font-volkswagen);
+}
