@@ -4,7 +4,7 @@
 import { useEffect, useState, useCallback } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 
 const products = [
   {
@@ -45,7 +45,7 @@ const products = [
   }
 ];
 
-const productVariants = {
+const productVariants: Variants = {
   enter: (direction: number) => ({
     x: direction > 0 ? 1000 : -1000,
     opacity: 0,
@@ -54,7 +54,9 @@ const productVariants = {
     x: 0,
     opacity: 1,
     transition: {
-      x: { type: "spring", stiffness: 300, damping: 30 },
+      type: "spring",
+      stiffness: 300,
+      damping: 30,
       opacity: { duration: 0.5 },
     }
   },
@@ -62,13 +64,15 @@ const productVariants = {
     x: direction < 0 ? 1000 : -1000,
     opacity: 0,
     transition: {
-      x: { type: "spring", stiffness: 300, damping: 30 },
+      type: "spring",
+      stiffness: 300,
+      damping: 30,
       opacity: { duration: 0.5 },
     }
   })
 };
 
-const infoVariants = {
+const infoVariants: Variants = {
   hidden: { opacity: 0, y: 50 },
   visible: { 
     opacity: 1, 
